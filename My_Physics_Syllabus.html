@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Physics Syllabus Important Graphs & Diagrams - Enhanced Visuals</title>
+<style>
+  /* General styling */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 0; background: #f3f6f9; color: #222;
+    line-height: 1.4;
+  }
+  h1, h2 {
+    text-align: center;
+    color: #004085;
+    margin-top: 1rem;
+  }
+  h2 {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.2rem;
+  }
+  section.diagram {
+    background: #fff;
+    max-width: 350px;
+    margin: 1rem auto 2rem auto;
+    padding: 1rem;
+    box-shadow: 0 0 12px rgba(0,0,0,0.06);
+    border-radius: 8px;
+  }
+  svg {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .caption {
+    text-align: center;
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  /* Mobile fit */
+  @media (max-width: 350px) {
+    body { font-size: 14px; }
+  }
+  /* Diagram specific styles */
+  .axis-line {
+    stroke: #333;
+    stroke-width: 1.5;
+  }
+  .grid-line {
+    stroke: #ddd;
+    stroke-width: 1;
+    stroke-dasharray: 3 3;
+  }
+  .label {
+    fill: #222;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .vector {
+    stroke-width: 3;
+    marker-end: url(#arrowhead);
+  }
+  .curve {
+    fill: none;
+    stroke: #007bff;
+    stroke-width: 2.5;
+  }
+  .curve-red {
+    stroke: #d9534f;
+  }
+  .curve-green {
+    stroke: #5cb85c;
+  }
+  /* Additional styles for improved visuals */
+  .electron {
+    fill: #f0ad4e;
+    stroke: #b5651d;
+    stroke-width: 1.5;
+  }
+  .photon {
+    fill: #d9534f;
+    stroke: #a03a2f;
+    stroke-width: 1.2;
+  }
+  .energy-level {
+    stroke: #222;
+    stroke-width: 3;
+  }
+  .energy-label {
+    font-weight: 700;
+    fill: #222;
+  }
+  .laser-photon {
+    stroke: #5cb85c;
+    stroke-width: 3;
+    marker-end: url(#arrowhead);
+  }
+  .ray-path {
+    stroke: #d9534f;
+    stroke-width: 3;
+    marker-end: url(#arrowhead);
+  }
+</style>
+</head>
+<body>
+
+<h1>Important Physics Graphs & Diagrams - Enhanced Visuals</h1>
+
+<!-- Defining arrowhead marker for vectors -->
+<svg style="display:none;">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+            refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#222" />
+    </marker>
+  </defs>
+</svg>
+
+<!-- Chapter 1: Electromagnetic Theory -->
+<h2>Chapter 1: Electromagnetic Theory</h2>
+
+<section class="diagram" aria-label="Displacement and Conduction Current Graph">
+  <svg viewBox="0 0 320 180" role="img" aria-labelledby="title1 desc1">
+    <title id="title1">Displacement Current vs Conduction Current Graph</title>
+    <desc id="desc1">Graph showing displacement and conduction currents intersecting.</desc>
+    <!-- Axes -->
+    <line x1="40" y1="150" x2="300" y2="150" class="axis-line"/>
+    <line x1="40" y1="30" x2="40" y2="150" class="axis-line"/>
+    <!-- Grid lines -->
+    <line x1="100" y1="30" x2="100" y2="150" class="grid-line"/>
+    <line x1="160" y1="30" x2="160" y2="150" class="grid-line"/>
+    <line x1="220" y1="30" x2="220" y2="150" class="grid-line"/>
+    <line x1="280" y1="30" x2="280" y2="150" class="grid-line"/>
+    <!-- Labels -->
+    <text x="300" y="168" class="label">Time / Frequency</text>
+    <text x="10" y="30" class="label" transform="rotate(-90 10,30)">Current Density</text>
+
+    <!-- Conduction Current - Blue curve -->
+    <path d="M40 140 Q90 75 150 75 T290 75" class="curve"></path>
+    <text x="250" y="110" fill="#007bff" font-size="12" font-weight="600">Conduction Current</text>
+
+    <!-- Displacement Current - Red curve -->
+    <path d="M40 90 Q90 135 150 135 T290 135" class="curve curve-red"></path>
+    <text x="250" y="50" fill="#d9534f" font-size="12" font-weight="600">Displacement Current</text>
+
+    <!-- Intersection circle -->
+    <circle cx="150" cy="105" r="6" fill="#f0ad4e" />
+    <text x="160" y="100" fill="#f0ad4e" font-weight="700" font-size="14">Equal</text>
+  </svg>
+  <div class="caption">Displacement current meets conduction current at intersection point.</div>
+</section>
+
+<section class="diagram" aria-label="Electric and Magnetic Field in EM Wave Diagram">
+  <svg viewBox="0 0 320 200" role="img" aria-labelledby="title2 desc2">
+    <title id="title2">Electric and Magnetic Field in EM Wave</title>
+    <desc id="desc2">3D diagram showing mutually perpendicular E, B fields and propagation vector k.</desc>
+    <!-- Axes -->
+    <line x1="30" y1="180" x2="280" y2="180" class="axis-line"/>
+    <line x1="30" y1="180" x2="30" y2="60" class="axis-line"/>
+    <line x1="30" y1="180" x2="150" y2="60" class="axis-line" stroke-dasharray="5 5"/>
+
+    <!-- Labels of axes -->
+    <text x="285" y="185" class="label">X-axis (Propagation k)</text>
+    <text x="5" y="60" class="label" transform="rotate(-90 5,60)">Y-axis (Electric Field, E)</text>
+    <text x="160" y="55" class="label">Z-axis (Magnetic Field, B)</text>
+
+    <!-- Vector E -->
+    <line x1="30" y1="140" x2="30" y2="90" stroke="#007bff" stroke-width="6" marker-end="url(#arrowhead)"/>
+    <text x="10" y="85" fill="#007bff" font-weight="700" font-size="20">E</text>
+    <!-- Vector B -->
+    <line x1="80" y1="180" x2="120" y2="140" stroke="#d9534f" stroke-width="6" marker-end="url(#arrowhead)"/>
+    <text x="125" y="135" fill="#d9534f" font-weight="700" font-size="20">B</text>
+    <!-- Vector k -->
+    <line x1="30" y1="180" x2="250" y2="180" stroke="#5cb85c" stroke-width="6" marker-end="url(#arrowhead)"/>
+    <text x="255" y="185" fill="#5cb85c" font-weight="700" font-size="20">k</text>
+  </svg>
+  <div class="caption">E, B, and propagation vector k are mutually perpendicular in an EM wave.</div>
+</section>
+
+<section class="diagram" aria-label="Poynting Vector Direction Diagram">
+  <svg viewBox="0 0 320 200" role="img" aria-labelledby="title3 desc3">
+    <title id="title3">Poynting Vector Direction</title>
+    <desc id="desc3">Diagram showing E and B vectors with resulting Poynting vector S.</desc>
+    <!-- Coordinate origin -->
+    <circle cx="60" cy="140" r="6" fill="#444"/>
+    <text x="50" y="155" class="label">Origin</text>
+
+    <!-- Vector E -->
+    <line x1="60" y1="140" x2="60" y2="80" stroke="#007bff" class="vector" stroke-width="5" />
+    <text x="40" y="85" fill="#007bff" font-weight="700" font-size="20">E</text>
+
+    <!-- Vector B -->
+    <line x1="60" y1="140" x2="110" y2="180" stroke="#d9534f" class="vector" stroke-width="5" />
+    <text x="115" y="185" fill="#d9534f" font-weight="700" font-size="20">B</text>
+
+    <!-- Poynting Vector S = E x B -->
+    <line x1="60" y1="140" x2="110" y2="100" stroke="#5cb85c" class="vector" stroke-width="5" />
+    <text x="115" y="95" fill="#5cb85c" font-weight="700" font-size="20">S</text>
+
+    <div style="font-size:14px; color:#444; margin-top:1rem; text-align:center;">Poynting vector shows direction of power flow as cross product of E and B.</div>
+  </svg>
+  <div class="caption">Direction of Poynting Vector \( \vec{S} = \vec{E} \times \vec{B} \).</div>
+</section>
+
+<!-- Chapter 2: Quantum Physics -->
+<h2>Chapter 2: Quantum Physics</h2>
+
+<section class="diagram" aria-label="Energy Level Diagram for Particle in a Box">
+  <svg viewBox="0 0 320 180" role="img" aria-labelledby="title4 desc4">
+    <title id="title4">Energy Level Diagram for Particle in a Box</title>
+    <desc id="desc4">Discrete energy levels increasing proportional to n squared.</desc>
+    <!-- Vertical line for box energy levels -->
+    <line x1="60" y1="30" x2="60" y2="150" class="axis-line"/>
+    <text x="65" y="25" class="label">Energies \(E_n\)</text>
+    <!-- Energy levels -->
+    <line x1="60" y1="140" x2="250" y2="140" class="energy-level"/>
+    <text x="255" y="146" class="energy-label">E₁ (n=1)</text>
+
+    <line x1="60" y1="110" x2="250" y2="110" class="energy-level"/>
+    <text x="255" y="116" class="energy-label">E₂ (n=2)</text>
+
+    <line x1="60" y1="70" x2="250" y2="70" class="energy-level"/>
+    <text x="255" y="76" class="energy-label">E₃ (n=3)</text>
+
+    <!-- n² label -->
+    <text x="10" y="145" class="label">n²</text>
+    <text x="10" y="115" class="label">4</text>
+    <text x="10" y="75" class="label">9</text>
+  </svg>
+  <div class="caption">Energy levels increase proportional to \( n^2 \) in particle in a box.</div>
+</section>
+
+<section class="diagram" aria-label="de Broglie Wavelength vs Velocity Graph">
+  <svg viewBox="0 0 320 180" role="img" aria-labelledby="title5 desc5">
+    <title id="title5">de Broglie Wavelength vs Velocity Graph</title>
+    <desc id="desc5">Hyperbolic curve where wavelength decreases as velocity increases.</desc>
+    <!-- Axes -->
+    <line x1="40" y1="140" x2="300" y2="140" class="axis-line"/>
+    <line x1="40" y1="20" x2="40" y2="140" class="axis-line"/>
+    <text x="290" y="160" class="label">Velocity (v)</text>
+    <text x="5" y="20" class="label" transform="rotate(-90 5,20)">Wavelength (λ)</text>
+
+    <!-- Hyperbolic curve -->
+    <path d="M45 135 Q 100 50 295 30" class="curve"></path>
+    <text x="110" y="45" fill="#007bff" font-weight="600" font-size="14">&#x03BB; = h/mv</text>
+  </svg>
+  <div class="caption">Wavelength decreases hyperbolically with increase in velocity.</div>
+</section>
+
+<section class="diagram" aria-label="Compton Effect Diagram - Enhanced">
+  <svg viewBox="0 0 320 200" role="img" aria-labelledby="title6 desc6">
+    <title id="title6">Compton Effect Diagram</title>
+    <desc id="desc6">X-ray photon scatters with electron and scattered photon angle.</desc>
+
+    <!-- Incoming Photon arrow -->
+    <line x1="30" y1="160" x2="140" y2="160" stroke="#007bff" stroke-width="4" marker-end="url(#arrowhead)" />
+    <circle cx="25" cy="160" r="8" fill="#007bff" />
+    <text x="10" y="165" fill="#007bff" font-weight="700" font-size="14">Photon (E)</text>
+
+    <!-- Electron (circle at impact) -->
+    <circle cx="140" cy="160" r="14" class="electron" />
+    <text x="130" y="185" fill="#b5651d" font-weight="700" font-size="12">Electron</text>
+
+    <!-- Scattered Photon arrow at an angle -->
+    <line x1="140" y1="160" x2="230" y2="110" stroke="#d9534f" stroke-width="4" marker-end="url(#arrowhead)" />
+    <circle cx="230" cy="110" r="8" fill="#d9534f" />
+    <text x="230" y="105" fill="#d9534f" font-weight="700" font-size="14">Scattered photon (θ)</text>
+
+    <!-- Recoil Electron arrow -->
+    <line x1="140" y1="160" x2="120" y2="210" stroke="#5cb85c" stroke-width="4" marker-end="url(#arrowhead)" />
+    <circle cx="120" cy="210" r="10" class="electron" />
+    <text x="90" y="215" fill="#5cb85c" font-weight="700" font-size="14">Recoil electron</text>
+  </svg>
+  <div class="caption">Illustration showing scattering of photon and recoil electron in Compton effect.</div>
+</section>
+
+<!-- Chapter 3: LASER and Fiber Optics -->
+<h2>Chapter 3: LASER and Fiber Optics</h2>
+
+<section class="diagram" aria-label="Population Inversion Diagram - Enhanced">
+  <svg viewBox="0 0 320 180" role="img" aria-labelledby="title7 desc7">
+    <title id="title7">Population Inversion Diagram</title>
+    <desc id="desc7">Energy levels with pumping and stimulated emission.</desc>
+    <!-- Energy levels -->
+    <line x1="60" y1="140" x2="250" y2="140" class="energy-level"/>
+    <text x="255" y="146" class="energy-label">E₁</text>
+
+    <line x1="60" y1="90" x2="250" y2="90" class="energy-level"/>
+    <text x="255" y="96" class="energy-label">E₂</text>
+
+    <line x1="60" y1="40" x2="250" y2="40" class="energy-level"/>
+    <text x="255" y="46" class="energy-label">E₃</text>
+
+    <!-- Arrows -->
+    <!-- Pumping arrow -->
+    <line x1="150" y1="145" x2="150" y2="45" stroke="#d9534f" stroke-width="5" marker-end="url(#arrowhead)"/>
+    <text x="95" y="100" fill="#d9534f" font-weight="700">Pumping to E₃</text>
+
+    <!-- Non-radiative decay -->
+    <line x1="210" y1="40" x2="210" y2="90" stroke="#f0ad4e" stroke-width="5" marker-end="url(#arrowhead)"/>
+    <text x="220" y="65" fill="#f0ad4e" font-weight="700">Non-radiative decay</text>
+
+    <!-- Stimulated emission -->
+    <line x1="120" y1="90" x2="120" y2="140" stroke="#5cb85c" stroke-width="5" marker-end="url(#arrowhead)"/>
+    <text x="50" y="115" fill="#5cb85c" font-weight="700">Stimulated emission to E₁</text>
+  </svg>
+  <div class="caption">Population inversion showing pumping, decay & emission in LASER.</div>
+</section>
+
+<section class="diagram" aria-label="LASER Emission Mechanism Diagram - Enhanced">
+  <svg viewBox="0 0 320 180" role="img" aria-labelledby="title8 desc8">
+    <title id="title8">LASER Emission Mechanism</title>
+    <desc id="desc8">Diagram for spontaneous and stimulated emission and photon multiplication.</desc>
+
+    <!-- Electron energy levels -->
+    <circle cx="250" cy="40" r="15" fill="#222" />
+    <circle cx="250" cy="120" r="15" fill="#222" />
+    <line x1="250" y1="55" x2="250" y2="105" stroke="#222" stroke-width="6" />
+
+    <!-- Spontaneous emission photon -->
+    <line x1="250" y1="40" x2="180" y2="10" stroke="#d9534f" stroke-width="4" marker-end="url(#arrowhead)" />
+    <circle cx="180" cy="10" r="8" class="photon" />
+    <text x="130" y="20" fill="#d9534f" font-weight="700" font-size="14">Spontaneous emission</text>
+
+    <!-- Incoming photon -->
+    <line x1="140" y1="80" x2="200" y2="80" stroke="#5cb85c" stroke-width="4" marker-end="url(#arrowhead)" />
+    <circle cx="140" cy="80" r="8" class="photon" />
+    <text x="60" y="90" fill="#5cb85c" font-weight="700" font-size="14">Incoming photon</text>
+
+    <!-- Stimulated emission photon -->
+    <line x1="250" y1="120" x2="320" y2="150" stroke="#5cb85c" stroke-width="4" marker-end="url(#arrowhead)" />
+    <circle cx="320" cy="150" r="8" class="photon" />
+    <text x="260" y="170" fill="#5cb85c" font-weight="700" font-size="14">Stimulated emission</text>
+  </svg>
+  <div class="caption">Photons triggering identical photons in LASER emission mechanism.</div>
+</section>
+
+<section class="diagram" aria-label="Structure of Optical Fiber Diagram - Enhanced">
+  <svg viewBox="0 0 320 180" role="img" aria-labelledby="title9 desc9">
+    <title id="title9">Structure of Optical Fiber</title>
+    <desc id="desc9">Core, cladding, jacket layers and total internal reflection ray diagram.</desc>
+    <!-- Layers with visible stroke -->
+    <circle cx="160" cy="90" r="40" fill="#cce5ff" stroke="#072c69" stroke-width="3"/>
+    <text x="160" y="140" font-size="14" text-anchor="middle" fill="#072c69">Core</text>
+
+    <circle cx="160" cy="90" r="60" fill="#b3d7ff" stroke="#044271" stroke-width="3"/>
+    <text x="160" y="165" font-size="14" text-anchor="middle" fill="#044271">Cladding</text>
+
+    <circle cx="160" cy="90" r="75" fill="#e6f0ff" stroke="#022845" stroke-width="3"/>
+    <text x="160" y="190" font-size="14" text-anchor="middle" fill="#022845">Jacket</text>
+    
+    <!-- Ray diagram for TIR -->
+    <!-- Incident ray -->
+    <line x1="100" y1="70" x2="130" y2="55" class="ray-path"/>
+    <circle cx="100" cy="70" r="5" fill="#d9534f" />
+    <text x="55" y="70" fill="#d9534f" font-weight="700">Incident Ray</text>
+
+    <!-- Reflected ray inside core -->
+    <line x1="130" y1="55" x2="180" y2="115" class="ray-path"/>
+    <circle cx="180" cy="115" r="5" fill="#5cb85c" />
+    <text x="190" y="125" fill="#5cb85c" font-weight="700">Reflected Ray</text>
+
+    <!-- Critical angle label -->
+    <text x="130" y="35" fill="#444" font-size="12" font-style="italic">Critical Angle</text>
+  </svg>
+  <div class="caption">Optical fiber showing core, cladding, jacket, and total internal reflection.</div>
+</section>
+
+<section class="diagram" aria-label="Acceptance Angle and NA Diagram">
+  <svg viewBox="0 0 320 180" role="img" aria-labelledby="title10 desc10">
+    <title id="title10">Acceptance Angle and Numerical Aperture Diagram</title>
+    <desc id="desc10">Acceptance cone and critical angle for optical fiber.</desc>
+
+    <!-- Fiber axis -->
+    <line x1="160" y1="160" x2="160" y2="20" stroke="#333" stroke-width="2" />
+
+    <!-- Cone -->
+    <path d="M160 160 L100 60 A60 60 0 0 1 220 60 L160 160" fill="#007bff33" stroke="#007bff" stroke-width="2"/>
+    <text x="130" y="70" fill="#007bff" font-weight="700">Acceptance Cone</text>
+
+    <!-- Critical angle arrow -->
+    <line x1="160" y1="160" x2="220" y2="60" stroke="#d9534f" stroke-width="3" marker-end="url(#arrowhead)" />
+    <text x="180" y="100" fill="#d9534f" font-weight="700">Critical Angle</text>
+
+    <!-- Numerical Aperture label -->
+    <text x="130" y="150" font-weight="700" fill="#444">Numerical Aperture (NA)</text>
+  </svg>
+  <div class="caption">Acceptance angle cone and numerical aperture concept.</div>
+</section>
+
+<!-- Chapter 4: Solid State Physics -->
+<h2>Chapter 4: Solid State Physics</h2>
+
+<section class="diagram" aria-label="Energy Band Diagram">
+  <svg viewBox="0 0 320 210" role="img" aria-labelledby="title11 desc11">
+    <title id="title11">Energy Band Diagram</title>
+    <desc id="desc11">Energy band diagram for metals, semiconductors, and insulators.</desc>
+
+    <!-- Metals -->
+    <text x="30" y="30" font-weight="700" fill="#222">Metals</text>
+    <rect x="50" y="55" width="100" height="20" fill="#007bff88" />
+    <rect x="50" y="70" width="100" height="20" fill="#007bff88" />
+    <text x="160" y="70" fill="#222">Overlapping Bands</text>
+
+    <!-- Semiconductors -->
+    <text x="30" y="105" font-weight="700" fill="#222">Semiconductors</text>
+    <rect x="50" y="125" width="100" height="20" fill="#5cb85c88" />
+    <rect x="50" y="150" width="100" height="20" fill="#5cb85c88" />
+    <line x1="150" y1="145" x2="160" y2="145" stroke="#444" stroke-width="3" />
+    <text x="165" y="148" fill="#444">Energy Gap (~1 eV)</text>
+
+    <!-- Insulators -->
+    <text x="30" y="185" font-weight="700" fill="#222">Insulators</text>
+    <rect x="50" y="205" width="100" height="20" fill="#d9534f88" />
+    <rect x="50" y="230" width="100" height="20" fill="#d9534f88" />
+    <line x1="150" y1="225" x2="170" y2="225" stroke="#444" stroke-width="3" />
+    <text x="175" y="228" fill="#444">Large Energy Gap</text>
+  </svg>
+  <div class="caption">Band diagrams illustrating band overlap and bandgap differences.</div>
+</section>
+
+<section class="diagram" aria-label="Fermi-Dirac Distribution Curve">
+  <svg viewBox="0 0 320 180" role="img" aria-labelledby="title12 desc12">
+    <title id="title12">Fermi-Dirac Distribution Curve</title>
+    <desc id="desc12">Distribution function f(E) vs energy E for T=0 and T&gt;0.</desc>
+    <!-- Axes -->
+    <line x1="50" y1="145" x2="300" y2="145" class="axis-line"/>
+    <line x1="50" y1="20" x2="50" y2="145" class="axis-line"/>
+    <text x="295" y="160" class="label">Energy (E)</text>
+    <text x="20" y="20" class="label" transform="rotate(-90 20,20)">f(E)</text>
+
+    <!-- Sharp drop T=0 -->
+    <path d="M50 50 L50 145 L150 145" stroke="#007bff" stroke-width="3" fill="none"/>
+    <text x="80" y="40" fill="#007bff" font-weight="700">T=0</text>
+
+    <!-- Smoothed curve T>0 -->
+    <path d="M50 70 Q100 75 140 130 L150 145" stroke="#d9534f" stroke-width="3" fill="none" />
+    <text x="180" y="80" fill="#d9534f" font-weight="700">T&gt;0</text>
+
+    <!-- Fermi energy line -->
+    <line x1="150" y1="20" x2="150" y2="145" stroke="#444" stroke-dasharray="5 3"/>
+    <text x="155" y="15" fill="#444">E_F</text>
+  </svg>
+  <div class="caption">Fermi-Dirac distribution showing sharp drop at zero temperature and smoothing with increasing temperature.</div>
+</section>
+
+<section class="diagram" aria-label="Superconductor Resistivity vs Temperature">
+  <svg viewBox="0 0 320 180" role="img" aria-labelledby="title13 desc13">
+    <title id="title13">Superconductor Resistivity vs Temperature</title>
+    <desc id="desc13">Graph showing resistivity dropping suddenly to zero at critical temperature for superconductors.</desc>
+    <!-- Axes -->
+    <line x1="40" y1="140" x2="300" y2="140" class="axis-line"/>
+    <line x1="40" y1="20" x2="40" y2="140" class="axis-line"/>
+    <text x="290" y="160" class="label">Temperature (T)</text>
+    <text x="5" y="20" class="label" transform="rotate(-90 5,20)">Resistivity (ρ)</text>
+
+    <!-- Normal metal linear decrease curve -->
+    <path d="M50 135 L290 90" stroke="#007bff" stroke-width="3"/>
+    <text x="210" y="95" fill="#007bff" font-weight="700">Normal Metal</text>
+
+    <!-- Superconductor sudden drop -->
+    <path d="M50 135 L210 130 L210 140" stroke="#d9534f" stroke-width="3"/>
+    <path d="M210 130 L210 140 L290 140" stroke="#d9534f" stroke-width="3"/>
+    <path d="M210 130 L290 10" stroke="#d9534f" stroke-width="3" stroke-dasharray="7 3"/>
+    <text x="230" y="60" fill="#d9534f" font-weight="700">Superconductor</text>
+
+    <!-- Critical temperature line -->
+    <line x1="210" y1="20" x2="210" y2="140" stroke="#444" stroke-dasharray="5 3"/>
+    <text x="220" y="15" fill="#444">T_c</text>
+  </svg>
+  <div class="caption">Resistivity vs temperature for normal metals and superconductors.</div>
+</section>
+
+<section class="diagram" aria-label="Critical Field vs Temperature Graph">
+  <svg viewBox="0 0 320 180" role="img" aria-labelledby="title14 desc14">
+    <title id="title14">Critical Field vs Temperature</title>
+    <desc id="desc14">Parabolic curve of critical field dropping to zero at critical temperature.</desc>
+    <!-- Axes -->
+    <line x1="40" y1="140" x2="300" y2="140" class="axis-line"/>
+    <line x1="40" y1="20" x2="40" y2="140" class="axis-line"/>
+    <text x="295" y="158" class="label">Temperature (T)</text>
+    <text x="10" y="20" class="label" transform="rotate(-90 10,20)">Critical Field Hc(T)</text>
+
+    <!-- Parabolic curve -->
+    <path d="M50 130 Q170 20 290 140" stroke="#5cb85c" stroke-width="3" fill="none"/>
+    <text x="180" y="35" fill="#5cb85c" font-weight="700">H_c(T) = H_c(0)(1 - (T/T_c)^2)</text>
+
+    <!-- Critical temperature line -->
+    <line x1="290" y1="20" x2="290" y2="140" stroke="#444" stroke-dasharray="5 3"/>
+    <text x="280" y="15" fill="#444">T_c</text>
+  </svg>
+  <div class="caption">Critical field as a function of temperature.</div>
+</section>
+
+<section class="diagram" aria-label="Type I vs Type II Superconductor Graph">
+  <svg viewBox="0 0 320 180" role="img" aria-labelledby="title15 desc15">
+    <title id="title15">Type I vs Type II Superconductor Magnetization Graph</title>
+    <desc id="desc15">Magnetization vs magnetic field for Type I and Type II superconductors.</desc>
+
+    <!-- Axes -->
+    <line x1="40" y1="140" x2="300" y2="140" class="axis-line"/>
+    <line x1="40" y1="20" x2="40" y2="140" class="axis-line"/>
+    <text x="290" y="158" class="label">Magnetic Field (H)</text>
+    <text x="5" y="20" class="label" transform="rotate(-90 5,20)">Magnetization (M)</text>
+
+    <!-- Type I: sharp drop -->
+    <path d="M50 130 L130 130 L130 140 L180 20 L290 20" stroke="#007bff" stroke-width="3" />
+    <text x="60" y="110" fill="#007bff" font-weight="700">Type I</text>
+
+    <!-- Type II: gradual decrease -->
+    <path d="M50 125 Q120 90 180 60 T290 20" stroke="#d9534f" stroke-width="3" />
+    <text x="200" y="125" fill="#d9534f" font-weight="700">Type II</text>
+  </svg>
+  <div class="caption">Magnetization behavior of Type I and Type II superconductors.</div>
+</section>
+
+<!-- Chapter 5: Electromagnetic Waves -->
+<h2>Chapter 5: Electromagnetic Waves</h2>
+
+<section class="diagram" aria-label="Variation of E and B in a Plane Wave">
+  <svg viewBox="0 0 320 180" role="img" aria-labelledby="title16 desc16">
+    <title id="title16">Variation of E and B in a Plane Wave</title>
+    <desc id="desc16">Sinusoidal curves of electric and magnetic fields varying with position.</desc>
+
+    <!-- Axes -->
+    <line x1="20" y1="90" x2="300" y2="90" class="axis-line"/>
+    <line x1="20" y1="20" x2="20" y2="160" class="axis-line"/>
+    <text x="290" y="105" class="label">Position (x)</text>
+    <text x="5" y="20" class="label" transform="rotate(-90 5,20)">Field Amplitude</text>
+
+    <!-- E field sinusoidal curve -->
+    <path d="M20 90 Q40 30 60 90 T140 90 T220 90 T300 90" stroke="#007bff" stroke-width="3" fill="none" />
+    <text x="50" y="30" fill="#007bff" font-weight="700">Electric Field (E)</text>
+
+    <!-- B field sinusoidal curve (phase shifted) -->
+    <path d="M20 90 Q40 150 60 90 T140 90 T220 90 T300 90" stroke="#d9534f" stroke-width="3" fill="none" />
+    <text x="50" y="160" fill="#d9534f" font-weight="700">Magnetic Field (B)</text>
+  </svg>
+  <div class="caption">Electric and magnetic fields vary sinusoidally and perpendicularly in a plane EM wave.</div>
+</section>
+
+<section class="diagram" aria-label="Skin Depth Diagram">
+  <svg viewBox="0 0 320 180" role="img" aria-labelledby="title17 desc17">
+    <title id="title17">Skin Depth Diagram</title>
+    <desc id="desc17">Exponential decay of electromagnetic wave amplitude inside conductor with depth.</desc>
+
+    <!-- Axes -->
+    <line x1="50" y1="140" x2="290" y2="140" class="axis-line"/>
+    <line x1="50" y1="30" x2="50" y2="140" class="axis-line"/>
+    <text x="280" y="160" class="label">Depth inside conductor</text>
+    <text x="5" y="30" class="label" transform="rotate(-90 5,30)">Amplitude (E)</text>
+
+    <!-- Exponential decay curve -->
+    <path d="M50 135 Q100 70 290 40" stroke="#007bff" stroke-width="3" fill="none" />
+    <text x="150" y="50" fill="#007bff" font-weight="700">Amplitude Decay</text>
+  </svg>
+  <div class="caption">EM wave amplitude exponentially decays with depth inside a conductor (skin depth).</div>
+</section>
+
+<section class="diagram" aria-label="Poynting Vector Illustration">
+  <svg viewBox="0 0 320 170" role="img" aria-labelledby="title18 desc18">
+    <title id="title18">Poynting Vector Illustration</title>
+    <desc id="desc18">Vector diagram showing E, B and Poynting vector S.</desc>
+
+    <!-- Origin -->
+    <circle cx="60" cy="140" r="6" fill="#444"/>
+    <text x="50" y="158" class="label">Origin</text>
+
+    <!-- Vector E -->
+    <line x1="60" y1="140" x2="60" y2="90" stroke="#007bff" stroke-width="5" marker-end="url(#arrowhead)" />
+    <text x="40" y="85" fill="#007bff" font-weight="700" font-size="20">E</text>
+
+    <!-- Vector B -->
+    <line x1="60" y1="140" x2="110" y2="180" stroke="#d9534f" stroke-width="5" marker-end="url(#arrowhead)" />
+    <text x="115" y="185" fill="#d9534f" font-weight="700" font-size="20">B</text>
+
+    <!-- Vector S -->
+    <line x1="60" y1="140" x2="110" y2="100" stroke="#5cb85c" stroke-width="5" marker-end="url(#arrowhead)" />
+    <text x="115" y="95" fill="#5cb85c" font-weight="700" font-size="20">S</text>
+
+    <div style="font-size:14px; color:#444; margin-top:1rem; text-align:center;">Power flow direction given by \( \vec{S} = \vec{E} \times \vec{B} \).</div>
+  </svg>
+  <div class="caption">Poynting vector direction as cross product of E and B fields in electromagnetic wave.</div>
+</section>
+
+</body>
+</html>
+</content>
+</create_file>
