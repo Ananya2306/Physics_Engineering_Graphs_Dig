@@ -30,7 +30,7 @@ This project contains a comprehensive collection of important physics graphs and
 
 ## Usage
 
-Simply open the `My_Physics.Syllabus.html` file in your favorite web browser (Chrome, Firefox, Edge, Safari) to view all the diagrams.
+Simply open the `index.html` file in your favorite web browser (Chrome, Firefox, Edge, Safari) to view all the diagrams.
 
 The file is optimized for both desktop and mobile viewing, fitting within 350px width and 600px height without requiring scrolling.
 
